@@ -1,0 +1,32 @@
+.container{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ padding: 1rem 3rem;
+ background-color: #dacabe;
+ margin-left: 25%;
+ margin-right: 25%;
+ margin-top: 7%;
+ border-radius: 0.5rem;
+}
+
+.heading{
+color: #115a11;
+}
+
+#buttonCheck{
+ width: 7vw;
+ margin-left: 40%;
+ margin-top: 0.5rem;
+}
+
+.changeTable{
+    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    border-spacing: 5px;
+    background-color: #ceb9aa;
+    text-align: center;
+}

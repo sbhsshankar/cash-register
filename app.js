@@ -8,7 +8,7 @@ const availableNotes = [500, 200, 100, 50, 20, 10, 5, 2, 1];
 
 buttonCheck.addEventListener("click", function validateBillAndCashAmount() {
     hideMessage();
-    if(billAmount > 0) {
+    if(billAmount.value > 0) {
         if(cashGiven.value >= billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value ;
             calculateChange(amountToBeReturned);
@@ -21,11 +21,13 @@ buttonCheck.addEventListener("click", function validateBillAndCashAmount() {
 });
 
 function calculateChange(amountToBeReturned) {
-    for(let i = 0; i<availableNotes.length; i++) {
-        const numberOfNotes = Math.trunc(amountToBeReturned / availableNotes[i]);
-    };
-    amountToBeReturned %= availableNotes[i];
-    noOfNotes[i].innerText = numberOfNotes;
+    for(let i = 0; i < availableNotes.length; i++) {
+        const numberOfNotes = Math.trunc(
+            amountToBeReturned / availableNotes[i]
+            );
+         amountToBeReturned %= availableNotes[i];
+         noOfNotes[i].innerText = numberOfNotes;
+    }
 }
 function hideMessage(){
     errorMessage.style.display = "none";
